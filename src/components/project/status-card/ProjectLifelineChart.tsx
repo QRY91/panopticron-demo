@@ -25,6 +25,7 @@ import {
 } from "recharts";
 import type { ProjectPriorityHistoryEntry } from "@/types/panopticron";
 import { isDemoMode } from "@/demo-config";
+import { generateMockPriorityHistory } from "@/mock/status-data";
 
 interface ProjectLifelineChartProps {
   projectId: string;
@@ -55,11 +56,6 @@ export const ProjectLifelineChart: React.FC<ProjectLifelineChartProps> = ({
   const [isError, setIsError] = useState(false);
   const [error, setError] = useState<any>(null);
 
-  // Determine API URL based on demo mode
-  const apiUrl = isDemoMode()
-    ? `/api/project-priority-history`
-    : `${process.env.NEXT_PUBLIC_SUPABASE_URL}/functions/v1/get-project-priority-history`;
-
   // Fetch data using useEffect for both modes
   useEffect(() => {
     if (!projectId) return;
@@ -70,16 +66,23 @@ export const ProjectLifelineChart: React.FC<ProjectLifelineChartProps> = ({
       setError(null);
 
       try {
-        const response = await fetch(
-          `${apiUrl}?project_id=${projectId}&time_range=${timeRange}`
-        );
+        if (isDemoMode()) {
+          // Use mock data directly in demo mode
+          const mockData = generateMockPriorityHistory(projectId, timeRange);
+          setHistoryEntries(mockData);
+        } else {
+          // Use real API in production
+          const response = await fetch(
+            `${process.env.NEXT_PUBLIC_SUPABASE_URL}/functions/v1/get-project-priority-history?project_id=${projectId}&time_range=${timeRange}`
+          );
 
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+
+          const data = await response.json();
+          setHistoryEntries(data);
         }
-
-        const data = await response.json();
-        setHistoryEntries(data);
       } catch (err) {
         setIsError(true);
         setError(err);
@@ -90,7 +93,7 @@ export const ProjectLifelineChart: React.FC<ProjectLifelineChartProps> = ({
     };
 
     fetchData();
-  }, [projectId, timeRange, apiUrl]);
+  }, [projectId, timeRange]);
 
   const handleTimeRangeChange = (event: any) => {
     setTimeRange(event.target.value as string);
@@ -125,7 +128,6 @@ export const ProjectLifelineChart: React.FC<ProjectLifelineChartProps> = ({
     );
   }
 
-  // Now, correctly check historyEntries (which is the array or undefined)
   if (!historyEntries || historyEntries.length === 0) {
     return (
       <Paper elevation={0} sx={{ p: 2, my: 1, textAlign: "center" }}>
@@ -166,7 +168,7 @@ export const ProjectLifelineChart: React.FC<ProjectLifelineChartProps> = ({
       </Box>
       <ResponsiveContainer width="100%" height={300}>
         <LineChart
-          data={historyEntries} // Pass the actual array
+          data={historyEntries}
           margin={{ top: 5, right: 30, left: 0, bottom: 25 }}
         >
           <CartesianGrid strokeDasharray="3 3" />
@@ -198,26 +200,16 @@ export const ProjectLifelineChart: React.FC<ProjectLifelineChartProps> = ({
               if (entry.reason_for_change) {
                 tooltipItems.push(`Reason: ${entry.reason_for_change}`);
               }
-              if (
-                entry.manual_override_value_at_event !== null &&
-                entry.manual_override_value_at_event !== undefined
-              ) {
-                tooltipItems.push(
-                  `Manual Override: ${entry.manual_override_value_at_event}`
-                );
-              }
-              return [tooltipItems.join(" \u2022 "), null];
+              return tooltipItems;
             }}
           />
-          <Legend wrapperStyle={{ paddingTop: 20 }} />
           <Line
             type="monotone"
             dataKey="final_priority_sort_key"
             stroke={theme.palette.primary.main}
             strokeWidth={2}
-            activeDot={{ r: 6 }}
-            name="Priority Score"
-            dot={historyEntries.length < 50} // Use the array's length
+            dot={false}
+            activeDot={{ r: 4 }}
           />
         </LineChart>
       </ResponsiveContainer>

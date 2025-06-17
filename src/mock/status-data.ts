@@ -1,4 +1,5 @@
 import { CiTestRun } from "@/types/ci";
+import { ProjectPriorityHistoryEntry } from "@/types/panopticron";
 
 // Mock worker runs
 export const mockWorkerRuns = [
@@ -87,3 +88,39 @@ export const mockCiTestRuns: CiTestRun[] = [
     created_at: new Date(Date.now() - 1000 * 60 * 60).toISOString(),
   },
 ];
+
+// Generate mock project priority history data
+export const generateMockPriorityHistory = (
+  projectId: string,
+  timeRange: string = "30d"
+): ProjectPriorityHistoryEntry[] => {
+  const now = new Date();
+  const days = timeRange === "7d" ? 7 : timeRange === "90d" ? 90 : 30;
+  const entries: ProjectPriorityHistoryEntry[] = [];
+
+  // Generate data points for the last X days
+  for (let i = days; i >= 0; i--) {
+    const date = new Date(now);
+    date.setDate(date.getDate() - i);
+
+    // Generate a priority score that fluctuates over time
+    const baseScore = 500;
+    const fluctuation = Math.sin(i / 3) * 200; // Creates a wave pattern
+    const randomVariation = (Math.random() - 0.5) * 50; // Adds some randomness
+    const finalScore = Math.round(baseScore + fluctuation + randomVariation);
+
+    entries.push({
+      project_id: projectId,
+      timestamp: date.toISOString(),
+      final_priority_sort_key: finalScore,
+      reason_for_change:
+        i % 3 === 0
+          ? "Updated due to new commits"
+          : i % 5 === 0
+          ? "Priority adjusted based on client feedback"
+          : "Regular priority update",
+    });
+  }
+
+  return entries;
+};
