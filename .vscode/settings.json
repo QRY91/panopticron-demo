@@ -1,0 +1,8 @@
+{
+  "deno.enable": true,
+  "deno.lint": true,
+  "deno.unstable": true, // Many Supabase examples use unstable Deno features
+  "deno.enablePaths": ["supabase/functions"]
+  // If you use an import map for your functions:
+  // "deno.importMap": "./supabase/functions/import_map.json"
+}
