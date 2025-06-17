@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# 🗼 Panopticon Terminal Slide Presenter
+# 🗼 Panopticron Terminal Slide Presenter
 # Navigate with: n (next), p (previous), q (quit), r (restart)
 
 # Colors for terminal output
@@ -143,7 +143,7 @@ show_slide() {
 
 # Main presentation loop
 main() {
-    echo -e "${BOLD}${GREEN}🗼 Panopticon Terminal Slide Presenter${NC}"
+    echo -e "${BOLD}${GREEN}🗼 Panopticron Terminal Slide Presenter${NC}"
     echo -e "${GRAY}Press any key to start...${NC}"
     read -n 1 -s
 
