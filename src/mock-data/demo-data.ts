@@ -23,7 +23,7 @@ export interface MockProject {
   budget_total: number;
   next_milestone: string;
   priority_sort_key: number;
-  manual_priority_override: boolean;
+  manual_priority_override: number | null;
   calculated_priority_score: number;
 }
 
@@ -228,8 +228,19 @@ export const mockProjects: MockProject[] = [
     budget_total: 85000,
     next_milestone: "User Testing Phase",
     priority_sort_key: 8800,
-    manual_priority_override: false,
+    manual_priority_override: null,
     calculated_priority_score: 8800,
+    // Vercel integration data
+    vercel_project_id: "prj_techflow_dashboard_v2",
+    vercel_org_slug: "techflow-solutions",
+    latest_prod_deployment_status: "READY",
+    latest_prod_deployment_url: "dashboard.techflow.com",
+    // GitHub integration data
+    github_repo_url: "https://github.com/borndigital/techflow-dashboard",
+    github_default_branch: "main",
+    github_ci_status: "success",
+    github_ci_url:
+      "https://github.com/borndigital/techflow-dashboard/actions/runs/12345",
   },
   {
     id: "project-2",
@@ -251,8 +262,19 @@ export const mockProjects: MockProject[] = [
     budget_total: 250000,
     next_milestone: "AR Feature Implementation",
     priority_sort_key: 150,
-    manual_priority_override: true,
+    manual_priority_override: null,
     calculated_priority_score: 200,
+    // Vercel integration data
+    vercel_project_id: "prj_global_retail_mobile",
+    vercel_org_slug: "global-retail-corp",
+    latest_prod_deployment_status: "ERROR",
+    latest_prod_deployment_url: null,
+    // GitHub integration data
+    github_repo_url: "https://github.com/borndigital/retail-mobile",
+    github_default_branch: "develop",
+    github_ci_status: "failure",
+    github_ci_url:
+      "https://github.com/borndigital/retail-mobile/actions/runs/67890",
   },
   {
     id: "project-3",
@@ -274,8 +296,19 @@ export const mockProjects: MockProject[] = [
     budget_total: 55000,
     next_milestone: "Community Features Launch",
     priority_sort_key: 4200,
-    manual_priority_override: false,
+    manual_priority_override: null,
     calculated_priority_score: 4200,
+    // Vercel integration data
+    vercel_project_id: "prj_green_energy_portal",
+    vercel_org_slug: "greenenergy-initiative",
+    latest_prod_deployment_status: "READY",
+    latest_prod_deployment_url: "portal.greenenergy.org",
+    // GitHub integration data
+    github_repo_url: "https://github.com/borndigital/green-portal",
+    github_default_branch: "main",
+    github_ci_status: "success",
+    github_ci_url:
+      "https://github.com/borndigital/green-portal/actions/runs/11223",
   },
   {
     id: "project-4",
@@ -297,8 +330,19 @@ export const mockProjects: MockProject[] = [
     budget_total: 90000,
     next_milestone: "Security Updates",
     priority_sort_key: 50,
-    manual_priority_override: true,
+    manual_priority_override: null,
     calculated_priority_score: 12000,
+    // Vercel integration data
+    vercel_project_id: "prj_creative_minds_cms",
+    vercel_org_slug: "creative-minds-agency",
+    latest_prod_deployment_status: "READY",
+    latest_prod_deployment_url: "cms.creativeminds.nl",
+    // GitHub integration data
+    github_repo_url: "https://github.com/borndigital/cms-creative",
+    github_default_branch: "main",
+    github_ci_status: "success",
+    github_ci_url:
+      "https://github.com/borndigital/cms-creative/actions/runs/33445",
   },
   {
     id: "project-5",
@@ -319,8 +363,19 @@ export const mockProjects: MockProject[] = [
     budget_total: 80000,
     next_milestone: "Security Audit",
     priority_sort_key: 6500,
-    manual_priority_override: false,
+    manual_priority_override: null,
     calculated_priority_score: 6500,
+    // Vercel integration data
+    vercel_project_id: "prj_medtech_portal",
+    vercel_org_slug: "medtech-innovations",
+    latest_prod_deployment_status: "BUILDING",
+    latest_prod_deployment_url: "portal.medtech.com",
+    // GitHub integration data
+    github_repo_url: "https://github.com/borndigital/medtech-portal",
+    github_default_branch: "main",
+    github_ci_status: "pending",
+    github_ci_url:
+      "https://github.com/borndigital/medtech-portal/actions/runs/55667",
   },
   {
     id: "project-6",
@@ -342,8 +397,19 @@ export const mockProjects: MockProject[] = [
     budget_total: 180000,
     next_milestone: "ML Model Deployment",
     priority_sort_key: 1800,
-    manual_priority_override: false,
+    manual_priority_override: null,
     calculated_priority_score: 1800,
+    // Vercel integration data
+    vercel_project_id: "prj_retail_analytics",
+    vercel_org_slug: "global-retail-corp",
+    latest_prod_deployment_status: "READY",
+    latest_prod_deployment_url: "analytics.globalretail.com",
+    // GitHub integration data
+    github_repo_url: "https://github.com/borndigital/retail-analytics",
+    github_default_branch: "develop",
+    github_ci_status: "failure",
+    github_ci_url:
+      "https://github.com/borndigital/retail-analytics/actions/runs/77889",
   },
   {
     id: "project-7",
@@ -364,9 +430,20 @@ export const mockProjects: MockProject[] = [
     budget_used: 58000,
     budget_total: 60000,
     next_milestone: "Project Complete",
-    priority_sort_key: 15000,
-    manual_priority_override: false,
+    priority_sort_key: 100,
+    manual_priority_override: 100,
     calculated_priority_score: 15000,
+    // Vercel integration data
+    vercel_project_id: "prj_techflow_gateway",
+    vercel_org_slug: "techflow-solutions",
+    latest_prod_deployment_status: "READY",
+    latest_prod_deployment_url: "api.techflow.com",
+    // GitHub integration data
+    github_repo_url: "https://github.com/borndigital/techflow-gateway",
+    github_default_branch: "main",
+    github_ci_status: "success",
+    github_ci_url:
+      "https://github.com/borndigital/techflow-gateway/actions/runs/99001",
   },
   {
     id: "project-8",
@@ -387,8 +464,19 @@ export const mockProjects: MockProject[] = [
     budget_total: 70000,
     next_milestone: "Client Approval Pending",
     priority_sort_key: 10500,
-    manual_priority_override: false,
+    manual_priority_override: null,
     calculated_priority_score: 10500,
+    // Vercel integration data
+    vercel_project_id: "prj_campaign_tracker",
+    vercel_org_slug: "creative-minds-agency",
+    latest_prod_deployment_status: "READY",
+    latest_prod_deployment_url: "tracker.creativeminds.nl",
+    // GitHub integration data
+    github_repo_url: "https://github.com/borndigital/campaign-tracker",
+    github_default_branch: "main",
+    github_ci_status: "success",
+    github_ci_url:
+      "https://github.com/borndigital/campaign-tracker/actions/runs/44556",
   },
 ];
 
@@ -983,6 +1071,121 @@ export const mockProjectPriorityHistory: MockProjectPriorityHistory[] = [
     calculated_priority_score: 3000,
     manual_override_value_at_event: null,
     reason_for_change: "GitHub CI status changed: failure -> success",
+  },
+
+  // Project-7 (TechFlow API Gateway) - Healthy project with manual override
+  {
+    id: "priority-history-7-1",
+    project_id: "project-7",
+    timestamp: format(subDays(now, 30), "yyyy-MM-dd'T'HH:mm:ss'Z'"),
+    final_priority_sort_key: 15000,
+    calculated_priority_score: 15000,
+    manual_override_value_at_event: null,
+    reason_for_change: "Initial baseline priority",
+  },
+  {
+    id: "priority-history-7-2",
+    project_id: "project-7",
+    timestamp: format(subDays(now, 20), "yyyy-MM-dd'T'HH:mm:ss'Z'"),
+    final_priority_sort_key: 14000,
+    calculated_priority_score: 14000,
+    manual_override_value_at_event: null,
+    reason_for_change: "Vercel status changed: READY -> BUILDING",
+  },
+  {
+    id: "priority-history-7-3",
+    project_id: "project-7",
+    timestamp: format(subDays(now, 20), "yyyy-MM-dd'T'HH:mm:ss'Z'"),
+    final_priority_sort_key: 15000,
+    calculated_priority_score: 15000,
+    manual_override_value_at_event: null,
+    reason_for_change: "Vercel status changed: BUILDING -> READY",
+  },
+  {
+    id: "priority-history-7-4",
+    project_id: "project-7",
+    timestamp: format(subDays(now, 7), "yyyy-MM-dd'T'HH:mm:ss'Z'"),
+    final_priority_sort_key: 100,
+    calculated_priority_score: 15000,
+    manual_override_value_at_event: 100,
+    reason_for_change:
+      "Manual priority override - urgent API documentation update required for client onboarding",
+  },
+  {
+    id: "priority-history-7-5",
+    project_id: "project-7",
+    timestamp: format(subDays(now, 3), "yyyy-MM-dd'T'HH:mm:ss'Z'"),
+    final_priority_sort_key: 100,
+    calculated_priority_score: 15000,
+    manual_override_value_at_event: 100,
+    reason_for_change: "Priority maintained - documentation sprint in progress",
+  },
+
+  // Project-8 (Creative Campaign Tracker) - Paused project showing deprioritization
+  {
+    id: "priority-history-8-1",
+    project_id: "project-8",
+    timestamp: format(subDays(now, 40), "yyyy-MM-dd'T'HH:mm:ss'Z'"),
+    final_priority_sort_key: 6000,
+    calculated_priority_score: 6000,
+    manual_override_value_at_event: null,
+    reason_for_change: "Initial baseline priority",
+  },
+  {
+    id: "priority-history-8-2",
+    project_id: "project-8",
+    timestamp: format(subDays(now, 30), "yyyy-MM-dd'T'HH:mm:ss'Z'"),
+    final_priority_sort_key: 5500,
+    calculated_priority_score: 5500,
+    manual_override_value_at_event: null,
+    reason_for_change: "Vercel status changed: READY -> BUILDING",
+  },
+  {
+    id: "priority-history-8-3",
+    project_id: "project-8",
+    timestamp: format(subDays(now, 30), "yyyy-MM-dd'T'HH:mm:ss'Z'"),
+    final_priority_sort_key: 6000,
+    calculated_priority_score: 6000,
+    manual_override_value_at_event: null,
+    reason_for_change: "Vercel status changed: BUILDING -> READY",
+  },
+  {
+    id: "priority-history-8-4",
+    project_id: "project-8",
+    timestamp: format(subDays(now, 25), "yyyy-MM-dd'T'HH:mm:ss'Z'"),
+    final_priority_sort_key: 5000,
+    calculated_priority_score: 5000,
+    manual_override_value_at_event: null,
+    reason_for_change: "GitHub CI status changed: success -> failure",
+  },
+  {
+    id: "priority-history-8-5",
+    project_id: "project-8",
+    timestamp: format(subDays(now, 21), "yyyy-MM-dd'T'HH:mm:ss'Z'"),
+    final_priority_sort_key: 8500,
+    calculated_priority_score: 8500,
+    manual_override_value_at_event: null,
+    reason_for_change:
+      "Project status changed: active -> paused (client request)",
+  },
+  {
+    id: "priority-history-8-6",
+    project_id: "project-8",
+    timestamp: format(subDays(now, 15), "yyyy-MM-dd'T'HH:mm:ss'Z'"),
+    final_priority_sort_key: 10500,
+    calculated_priority_score: 10500,
+    manual_override_value_at_event: null,
+    reason_for_change:
+      "Priority adjusted for paused status - awaiting client approval",
+  },
+  {
+    id: "priority-history-8-7",
+    project_id: "project-8",
+    timestamp: format(subDays(now, 5), "yyyy-MM-dd'T'HH:mm:ss'Z'"),
+    final_priority_sort_key: 10500,
+    calculated_priority_score: 10500,
+    manual_override_value_at_event: null,
+    reason_for_change: "Status maintained - project remains on hold",
   },
 ];
 
