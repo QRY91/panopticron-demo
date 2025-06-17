@@ -33,7 +33,7 @@
     "@refinedev/react-hook-form": "^4.9.3",
     "@refinedev/supabase": "^5.9.8",
     "@supabase/auth-helpers-nextjs": "^0.10.0",
-    "@supabase/ssr": "^0.3.0",
+    "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.43.5",
     "@tanstack/react-query": "^4.36.1",
     "@testing-library/user-event": "^14.6.1",
