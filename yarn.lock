@@ -388,10 +388,10 @@
   resolved "https://registry.npmjs.org/@csstools/css-tokenizer/-/css-tokenizer-3.0.3.tgz"
   integrity sha512-UJnjoFsmxfKUdNYdWgOB0mWUypuLvAfQPH1+pyvRJs6euowbFkFC6P13w1l8mJyi3vxYMxc9kld5jZEGRQs6bw==
 
-"@deno/linux-x64-glibc@2.3.3":
+"@deno/win32-x64@2.3.3":
   version "2.3.3"
-  resolved "https://registry.npmjs.org/@deno/linux-x64-glibc/-/linux-x64-glibc-2.3.3.tgz"
-  integrity sha512-+w+XtukKjF7O3GiZKyaoOxFadu8HWfwijaQK1qQgUsB82QCmfmmDssRAX/MYiOeveM2izj/QlIzCOwb+O2Ovaw==
+  resolved "https://registry.npmjs.org/@deno/win32-x64/-/win32-x64-2.3.3.tgz"
+  integrity sha512-0YeiukjSTLuiXMghry/liRQEbp20l1nDmgjbG7Mf98Rw2Zz68xZ9IZMXMzWS3J5xfTYexEjQCWPJJk3NRWyufQ==
 
 "@emotion/babel-plugin@^11.13.5":
   version "11.13.5"
@@ -500,10 +500,10 @@
   resolved "https://registry.npmjs.org/@emotion/weak-memoize/-/weak-memoize-0.4.0.tgz"
   integrity sha512-snKqtPW01tN0ui7yu9rGv69aJXr/a/Ywvl11sUjNtEcRc+ng/mQriFL0wLXMef74iHa/EkftbDzU9F8iFbH+zg==
 
-"@esbuild/linux-x64@0.25.4":
+"@esbuild/win32-x64@0.25.4":
   version "0.25.4"
-  resolved "https://registry.npmjs.org/@esbuild/linux-x64/-/linux-x64-0.25.4.tgz"
-  integrity sha512-6e0cvXwzOnVWJHq+mskP8DNSrKBr1bULBvnFLpc1KY+d+irZSgZ02TGse5FsafKS5jg2e4pbvK6TPXaF/A6+CA==
+  resolved "https://registry.npmjs.org/@esbuild/win32-x64/-/win32-x64-0.25.4.tgz"
+  integrity sha512-nOT2vZNw6hJ+z43oP1SPea/G/6AbN6X+bGNhNuq8NtRHy4wsMhw765IKLNmnjek7GvjWBYQ8Q5VBoYTFg9y1UQ==
 
 "@eslint-community/eslint-utils@^4.2.0", "@eslint-community/eslint-utils@^4.7.0":
   version "4.7.0"
@@ -905,10 +905,10 @@
   dependencies:
     glob "10.3.10"
 
-"@next/swc-linux-x64-gnu@14.2.29":
+"@next/swc-win32-x64-msvc@14.2.29":
   version "14.2.29"
-  resolved "https://registry.npmjs.org/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-14.2.29.tgz"
-  integrity sha512-B7JtMbkUwHijrGBOhgSQu2ncbCYq9E7PZ7MX58kxheiEOwdkM+jGx0cBb+rN5AeqF96JypEppK6i/bEL9T13lA==
+  resolved "https://registry.npmjs.org/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-14.2.29.tgz"
+  integrity sha512-iPPwUEKnVs7pwR0EBLJlwxLD7TTHWS/AoVZx1l9ZQzfQciqaFEr5AlYzA2uB6Fyby1IF18t4PL0nTpB+k4Tzlw==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -1144,10 +1144,10 @@
   dependencies:
     kbar "^0.1.0-beta.40"
 
-"@refinedev/mui@^6.1.3":
-  version "6.1.3"
-  resolved "https://registry.npmjs.org/@refinedev/mui/-/mui-6.1.3.tgz"
-  integrity sha512-LPPD9zwKRhmnadth80SlCix1bEe2obxhrSH5xiVp8aHnF7tTcISbwAeF3yLz1cWn+pReZDOuLRD9X0A9lZ/VhA==
+"@refinedev/mui@^6.2.1":
+  version "6.2.1"
+  resolved "https://registry.npmjs.org/@refinedev/mui/-/mui-6.2.1.tgz"
+  integrity sha512-Li9xCSJcECM7eUo1BLCbOYAkwAYsEfGhOSEyTHNEH42Y9sgBBTC/FN67jpklrgKrAM6QuvP3h5VYJv5Gf6kToQ==
   dependencies:
     "@emotion/react" "^11.8.2"
     "@emotion/styled" "^11.8.1"
@@ -1156,13 +1156,13 @@
     "@mui/material" "^6.1.7"
     "@mui/system" "^6.1.6"
     "@mui/x-data-grid" "^7.23.5"
-    "@refinedev/react-hook-form" "^4.9.3"
+    "@refinedev/react-hook-form" "^4.10.1"
     "@refinedev/ui-types" "^1.24.2"
     dayjs "^1.10.7"
     lodash "^4.17.21"
     lodash-es "^4.17.21"
     notistack "^2.0.4"
-    react-hook-form "^7.43.5"
+    react-hook-form "^7.57.0"
     react-markdown "^6.0.1"
     remark-gfm "^1.0.0"
     tslib "^2.6.2"
@@ -1176,14 +1176,14 @@
     qs "^6.10.1"
     warn-once "^0.1.0"
 
-"@refinedev/react-hook-form@^4.9.3":
-  version "4.9.3"
-  resolved "https://registry.npmjs.org/@refinedev/react-hook-form/-/react-hook-form-4.9.3.tgz"
-  integrity sha512-quAHYPe9TzknXg1AFP6ZSeigkRFL8Mbk8B7pXCsT+/M5MAfQsdtd8hq3PX8hDapQFKz8HbB3UVNXdWZgG8fOOA==
+"@refinedev/react-hook-form@^4.10.1", "@refinedev/react-hook-form@^4.9.3":
+  version "4.10.1"
+  resolved "https://registry.npmjs.org/@refinedev/react-hook-form/-/react-hook-form-4.10.1.tgz"
+  integrity sha512-Sq4grbzPBA+/aHlBcKK0CV+uk+xfY8efZCU9FBrQYQ4VPE4aRUGAiiYhoHOoS4ir6gcWved0RMiCql6f0SSu3w==
   dependencies:
     lodash "^4.17.21"
     lodash-es "^4.17.21"
-    react-hook-form "^7.43.5"
+    react-hook-form "^7.57.0"
 
 "@refinedev/supabase@^5.9.8":
   version "5.9.8"
@@ -1206,10 +1206,10 @@
   resolved "https://registry.npmjs.org/@rolldown/pluginutils/-/pluginutils-1.0.0-beta.9.tgz"
   integrity sha512-e9MeMtVWo186sgvFFJOPGy7/d2j2mZhLJIdVW0C/xDluuOvymEATqz6zKsP0ZmXGzQtqlyjz5sC1sYQUoJG98w==
 
-"@rollup/rollup-linux-x64-gnu@4.41.0":
+"@rollup/rollup-win32-x64-msvc@4.41.0":
   version "4.41.0"
-  resolved "https://registry.npmjs.org/@rollup/rollup-linux-x64-gnu/-/rollup-linux-x64-gnu-4.41.0.tgz"
-  integrity sha512-XMLeKjyH8NsEDCRptf6LO8lJk23o9wvB+dJwcXMaH6ZQbbkHu2dbGIUindbMtRN6ux1xKi16iXWu6q9mu7gDhQ==
+  resolved "https://registry.npmjs.org/@rollup/rollup-win32-x64-msvc/-/rollup-win32-x64-msvc-4.41.0.tgz"
+  integrity sha512-h1J+Yzjo/X+0EAvR2kIXJDuTuyT7drc+t2ALY0nIcGPbTatNOf0VWdhEA2Z4AAjv6X1NJV7SYo5oCTYRJhSlVA==
 
 "@rtsao/scc@^1.1.0":
   version "1.1.0"
@@ -1677,10 +1677,10 @@
   resolved "https://registry.npmjs.org/@ungap/structured-clone/-/structured-clone-1.3.0.tgz"
   integrity sha512-WmoN8qaIAo7WTYWbAZuG8PYEhn5fkz7dZrqTBZ7dtt//lL2Gwms1IcnQ5yHqjDfX8Ft5j4YzDM23f87zBfDe9g==
 
-"@unrs/resolver-binding-linux-x64-gnu@1.7.2":
+"@unrs/resolver-binding-win32-x64-msvc@1.7.2":
   version "1.7.2"
-  resolved "https://registry.npmjs.org/@unrs/resolver-binding-linux-x64-gnu/-/resolver-binding-linux-x64-gnu-1.7.2.tgz"
-  integrity sha512-dEidzJDubxxhUCBJ/SHSMJD/9q7JkyfBMT77Px1npl4xpg9t0POLvnWywSk66BgZS/b2Hy9Y1yFaoMTFJUe9yg==
+  resolved "https://registry.npmjs.org/@unrs/resolver-binding-win32-x64-msvc/-/resolver-binding-win32-x64-msvc-1.7.2.tgz"
+  integrity sha512-friS8NEQfHaDbkThxopGk+LuE5v3iY0StruifjQEt7SLbA46OnfgMO15sOTkbpJkol6RB+1l1TYPXh0sCddpvA==
 
 "@vitejs/plugin-react@^4.4.1":
   version "4.5.0"
@@ -5844,10 +5844,10 @@ react-dom@^18.0.0, react-dom@^18.3.1:
     loose-envify "^1.1.0"
     scheduler "^0.23.2"
 
-react-hook-form@^7.43.5, react-hook-form@^7.52.0:
-  version "7.56.4"
-  resolved "https://registry.npmjs.org/react-hook-form/-/react-hook-form-7.56.4.tgz"
-  integrity sha512-Rob7Ftz2vyZ/ZGsQZPaRdIefkgOSrQSPXfqBdvOPwJfoGnjwRJUs7EM7Kc1mcoDv3NOtqBzPGbcMB8CGn9CKgw==
+react-hook-form@^7.52.0, react-hook-form@^7.57.0:
+  version "7.58.1"
+  resolved "https://registry.npmjs.org/react-hook-form/-/react-hook-form-7.58.1.tgz"
+  integrity sha512-Lml/KZYEEFfPhUVgE0RdCVpnC4yhW+PndRhbiTtdvSlQTL8IfVR+iQkBjLIvmmc6+GGoVeM11z37ktKFPAb0FA==
 
 react-is@^16.13.1:
   version "16.13.1"

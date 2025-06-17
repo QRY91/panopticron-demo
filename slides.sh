@@ -47,7 +47,6 @@ slide_1() {
     echo -e "• ⏰ Tijdverlies = Bad for business!"
     echo ""
     echo -e "${CYAN}→ Switch to /landing-page demo${NC}"
-    show_nav
 }
 
 slide_2() {
@@ -61,7 +60,6 @@ slide_2() {
     echo -e "• 💡 Lantaarn → Verhelderende inzichten"
     echo ""
     echo -e "${CYAN}→ \"We zijn digital natives, dus...\"${NC}"
-    show_nav
 }
 
 slide_3() {
@@ -75,7 +73,6 @@ slide_3() {
     echo -e "• ✨ Interactiviteit & animaties"
     echo ""
     echo -e "${CYAN}→ Switch to /showcase demo${NC}"
-    show_nav
 }
 
 slide_4() {
@@ -89,7 +86,6 @@ slide_4() {
     echo -e "• 🛤️  Pad verlichten voor gebruikers"
     echo ""
     echo -e "${CYAN}→ Switch to /experiments demo${NC}"
-    show_nav
 }
 
 slide_5() {
@@ -103,7 +99,6 @@ slide_5() {
     echo -e "• 📈 Lifeline charts (historische trends)"
     echo ""
     echo -e "${BOLD}${RED}→ Switch to /dashboard demo (MAIN EVENT)${NC}"
-    show_nav
 }
 
 slide_6() {
@@ -117,7 +112,6 @@ slide_6() {
     echo -e "• 🎯 Nooit meer belangen uit het oog"
     echo ""
     echo -e "${CYAN}→ Switch to /projects + /status demo${NC}"
-    show_nav
 }
 
 slide_7() {
@@ -131,7 +125,6 @@ slide_7() {
     echo -e "• 💪 Overzicht behouden = missie geslaagd"
     echo ""
     echo -e "${CYAN}→ Questions & wrap-up${NC}"
-    show_nav
 }
 
 # Function to show current slide
