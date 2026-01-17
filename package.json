@@ -68,7 +68,7 @@
     "eslint": "^8.57.1",
     "eslint-config-next": "^14.2.3",
     "jsdom": "^26.1.0",
-    "supabase": "^2.22.12",
+    "supabase": "^2.72.8",
     "typescript": "^5.4.5",
     "vitest": "^3.1.4"
   },
